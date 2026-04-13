@@ -5,303 +5,524 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>How the US Compares to Socialist Hybrid Countries</title>
 <style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-    background: #f0f2f7;
-    padding: 32px 16px;
-    min-height: 100vh;
-  }
-  .card {
-    background: #ffffff;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 4px 30px rgba(0,0,0,0.12);
-    max-width: 1020px;
-    margin: 0 auto;
-  }
-  .header {
-    background: #1a2744;
-    padding: 28px 32px 22px;
-    color: white;
-  }
-  .header h1.main-title {
-    font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    letter-spacing: -0.4px;
-    line-height: 1.2;
-  }
-  .header h2.sub-title {
-    font-size: 14px;
-    font-weight: 500;
-    color: #94a8c7;
-    margin-bottom: 6px;
-  }
-  .header p {
-    font-size: 12.5px;
-    color: #7a90b5;
-    line-height: 1.5;
-  }
-  .legend {
-    display: flex;
-    gap: 18px;
-    padding: 10px 28px;
-    background: #f8f9fc;
-    border-bottom: 1px solid #e8eaf0;
-    flex-wrap: wrap;
-  }
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 11px;
-    color: #555;
-  }
-  .legend-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
-  .tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 12.5px;
-    min-width: 700px;
-  }
-  thead th {
-    background: #f2f4f8;
-    padding: 9px 11px;
-    text-align: left;
-    font-size: 10.5px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: #5a6680;
-    border-bottom: 2px solid #dde1ec;
-    white-space: nowrap;
-  }
-  tbody td {
-    padding: 9px 11px;
-    border-bottom: 1px solid #edf0f6;
-    vertical-align: middle;
-    color: #1a1f2e;
-  }
-  tbody tr:last-child td { border-bottom: none; }
-  tbody tr:hover { background: #f9fafd; }
-  .us-row { background: #fffbf0; }
-  .us-row td:first-child { border-left: 4px solid #d4900a; }
-  .country-name { font-weight: 600; font-size: 13px; }
-  .country-sub { font-size: 10.5px; color: #7a85a0; margin-top: 1px; }
-  .model-tag {
-    display: inline-block;
-    font-size: 10px;
-    padding: 2px 6px;
-    border-radius: 3px;
-    background: #eef0f6;
-    color: #5a6680;
-    line-height: 1.4;
-    margin-top: 2px;
-    max-width: 180px;
-  }
-  .badge {
-    display: inline-block;
-    padding: 3px 8px;
-    border-radius: 4px;
-    font-size: 11.5px;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .b-green { background: #e5f5d8; color: #2e6010; }
-  .b-blue  { background: #ddeeff; color: #1254a0; }
-  .b-amber { background: #fef3d8; color: #8a5500; }
-  .b-red   { background: #fdecea; color: #9b2020; }
-  .b-teal  { background: #d8f2e8; color: #0d5e42; }
-  .flag { font-size: 20px; margin-right: 6px; vertical-align: middle; }
-  .us-label {
-    font-size: 9.5px;
-    font-weight: 700;
-    color: #d4900a;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 1px;
-  }
-  .footnote {
-    padding: 14px 24px;
-    background: #f2f4f8;
-    font-size: 11px;
-    color: #6a7490;
-    line-height: 1.6;
-    border-top: 1px solid #dde1ec;
-  }
-  .footnote strong { color: #3a4260; }
-  .source-line {
-    padding: 10px 24px;
-    background: #e8ebf2;
-    font-size: 10.5px;
-    color: #8090b0;
-    text-align: center;
-    line-height: 1.6;
-  }
-  .attribution {
-    text-align: center;
-    padding: 16px;
-    font-size: 11px;
-    color: #aaa;
-  }
-  .attribution a { color: #1a2744; text-decoration: none; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  background: #f0f2f7;
+  padding: 28px 16px 48px;
+  min-height: 100vh;
+}
+.card {
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.11);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.header {
+  background: #1a2744;
+  padding: 26px 30px 20px;
+  color: white;
+}
+.header h1 { font-size: 24px; font-weight: 800; margin-bottom: 7px; letter-spacing: -0.3px; line-height: 1.2; }
+.header h2 { font-size: 13px; font-weight: 500; color: #94a8c7; margin-bottom: 5px; }
+.header p  { font-size: 12px; color: #7a90b5; line-height: 1.5; }
+.picker {
+  padding: 16px 24px;
+  background: #f4f6fb;
+  border-bottom: 1px solid #e0e4ee;
+}
+.picker-label {
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.05em; color: #5a6680; margin-bottom: 10px;
+}
+.picker-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.chip {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 11px; border-radius: 20px; font-size: 11.5px;
+  cursor: pointer; user-select: none; transition: all 0.15s;
+  border: 1.5px solid #c8cfe0; background: #fff; color: #4a5470;
+  white-space: nowrap;
+}
+.chip.active { background: #1a2744; color: #fff; border-color: #1a2744; }
+.chip:hover:not(.active) { background: #eef0f8; }
+.chip .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+.legend {
+  display: flex; gap: 16px; padding: 9px 24px;
+  background: #f8f9fc; border-bottom: 1px solid #e8eaf0; flex-wrap: wrap;
+}
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #555; }
+.legend-dot { width: 9px; height: 9px; border-radius: 2px; flex-shrink: 0; }
+.sort-hint {
+  padding: 6px 24px; background: #f8f9fc; border-bottom: 1px solid #e8eaf0;
+  font-size: 11px; color: #8090b0;
+}
+.tbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+thead th {
+  background: #f2f4f8;
+  padding: 8px 10px;
+  text-align: left;
+  font-size: 10px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  color: #5a6680;
+  border-bottom: 2px solid #dde1ec;
+  white-space: nowrap;
+  vertical-align: bottom;
+  cursor: pointer;
+  user-select: none;
+}
+thead th:hover { background: #e8eaf4; color: #1a2744; }
+thead th.sort-asc::after  { content: " ▲"; font-size: 9px; color: #1a2744; }
+thead th.sort-desc::after { content: " ▼"; font-size: 9px; color: #1a2744; }
+thead th.sort-asc, thead th.sort-desc { color: #1a2744; background: #e4e8f4; }
+tbody td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #edf0f6;
+  vertical-align: middle;
+  color: #1a1f2e;
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:hover:not(.us-row) { background: #f9fafd; }
+.us-row { background: #fffbf0; }
+.us-row td:first-child { border-left: 4px solid #d4900a; }
+.country-name { font-weight: 600; font-size: 13px; }
+.country-sub  { font-size: 10px; color: #7a85a0; margin-top: 1px; }
+.model-tag {
+  display: inline-block; font-size: 10px; padding: 2px 6px;
+  border-radius: 3px; background: #eef0f6; color: #5a6680;
+  line-height: 1.4; margin-top: 2px; max-width: 200px;
+}
+.badge {
+  display: inline-block; padding: 2px 7px; border-radius: 4px;
+  font-size: 11px; font-weight: 600; white-space: nowrap;
+}
+.b-green  { background: #e5f5d8; color: #2e6010; }
+.b-blue   { background: #ddeeff; color: #1254a0; }
+.b-amber  { background: #fef3d8; color: #8a5500; }
+.b-red    { background: #fdecea; color: #9b2020; }
+.b-teal   { background: #d8f2e8; color: #0d5e42; }
+.flag { font-size: 19px; margin-right: 5px; vertical-align: middle; }
+.us-label {
+  font-size: 9px; font-weight: 700; color: #d4900a;
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 1px;
+}
+.footnote {
+  padding: 13px 22px; background: #f2f4f8;
+  font-size: 11px; color: #6a7490; line-height: 1.6;
+  border-top: 1px solid #dde1ec;
+}
+.footnote strong { color: #3a4260; }
+.source-line {
+  padding: 9px 22px; background: #e8ebf2;
+  font-size: 10px; color: #8090b0; text-align: center; line-height: 1.6;
+}
+.attribution { text-align: center; padding: 14px; font-size: 11px; color: #aaa; }
+.attribution a { color: #1a2744; text-decoration: none; }
 </style>
 </head>
 <body>
 <div class="card">
   <div class="header">
-    <h1 class="main-title">How the US Compares to Socialist Hybrid Countries</h1>
-    <h2 class="sub-title">Key Well-Being Indicators Across Social Democracies &amp; Democratic Socialist Hybrids</h2>
-    <p>Countries selected have significant public ownership, universal health/education programs, and/or robust redistribution. The US is highlighted for comparison.</p>
+    <h1>How the US Compares to Socialist Hybrid Countries</h1>
+    <h2>Key Well-Being Indicators Across Social Democracies &amp; Democratic Socialist Hybrids</h2>
+    <p>Countries with significant public ownership, universal health/education programs, and/or robust redistribution. US sorts with all other countries. Click any column header to sort. Toggle metrics on or off below.</p>
   </div>
+
+  <div class="picker">
+    <div class="picker-label">Show / hide metrics</div>
+    <div class="picker-chips" id="chips"></div>
+  </div>
+
   <div class="legend">
     <div class="legend-item"><div class="legend-dot" style="background:#4a9e1a;"></div> Strong performer</div>
     <div class="legend-item"><div class="legend-dot" style="background:#d4900a;"></div> Mixed / moderate</div>
     <div class="legend-item"><div class="legend-dot" style="background:#c93030;"></div> Weaker performer</div>
     <div class="legend-item"><div class="legend-dot" style="background:#1e72c8;"></div> Informational</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6b3fb5;"></div> Education metric</div>
   </div>
+  <div class="sort-hint">Click any column header to sort ascending or descending.</div>
+
   <div class="tbl-wrap">
-  <table>
-    <thead>
-      <tr>
-        <th>Country</th>
-        <th>Model Type</th>
-        <th>Happiness Rank<br>(2026 WHR, 0–10)</th>
-        <th>Life Expectancy<br>(years, ~2024)</th>
-        <th>Gini Coeff.<br>(lower = more equal)</th>
-        <th>Health Spend<br>(% of GDP)</th>
-        <th>Universal<br>Health Coverage</th>
-        <th>GDP/Capita<br>(USD PPP, approx.)</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="flag">🇫🇮</span><span class="country-name">Finland</span><div class="country-sub">Nordic</div></td>
-        <td><div class="model-tag">Social democracy</div></td>
-        <td><span class="badge b-green">#1 &nbsp; 7.74</span></td>
-        <td><span class="badge b-green">82.5 yrs</span></td>
-        <td><span class="badge b-green">~27</span></td>
-        <td><span class="badge b-blue">~9%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$57,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇩🇰</span><span class="country-name">Denmark</span><div class="country-sub">Nordic</div></td>
-        <td><div class="model-tag">Social democracy</div></td>
-        <td><span class="badge b-green">#3 &nbsp; 7.58</span></td>
-        <td><span class="badge b-green">81.5 yrs</span></td>
-        <td><span class="badge b-green">~28</span></td>
-        <td><span class="badge b-blue">~10%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$67,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇮🇸</span><span class="country-name">Iceland</span><div class="country-sub">Nordic</div></td>
-        <td><div class="model-tag">Social democracy</div></td>
-        <td><span class="badge b-green">#2 &nbsp; 7.53</span></td>
-        <td><span class="badge b-green">83.0 yrs</span></td>
-        <td><span class="badge b-green">~26</span></td>
-        <td><span class="badge b-blue">~9%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$65,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇸🇪</span><span class="country-name">Sweden</span><div class="country-sub">Nordic</div></td>
-        <td><div class="model-tag">Social democracy</div></td>
-        <td><span class="badge b-green">#4 &nbsp; 7.34</span></td>
-        <td><span class="badge b-green">83.0 yrs</span></td>
-        <td><span class="badge b-green">~29</span></td>
-        <td><span class="badge b-blue">~11%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$62,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇳🇱</span><span class="country-name">Netherlands</span><div class="country-sub">Western Europe</div></td>
-        <td><div class="model-tag">Social market economy</div></td>
-        <td><span class="badge b-green">#7 &nbsp; 7.32</span></td>
-        <td><span class="badge b-green">82.5 yrs</span></td>
-        <td><span class="badge b-green">~28</span></td>
-        <td><span class="badge b-blue">~11%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$65,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇳🇴</span><span class="country-name">Norway</span><div class="country-sub">Nordic</div></td>
-        <td><div class="model-tag">Social democracy + sovereign wealth</div></td>
-        <td><span class="badge b-green">#6 &nbsp; 7.30</span></td>
-        <td><span class="badge b-green">83.5 yrs</span></td>
-        <td><span class="badge b-green">~27</span></td>
-        <td><span class="badge b-blue">~11%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$82,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇨🇦</span><span class="country-name">Canada</span><div class="country-sub">North America</div></td>
-        <td><div class="model-tag">Liberal welfare state</div></td>
-        <td><span class="badge b-teal">#18 &nbsp; 6.90</span></td>
-        <td><span class="badge b-green">82.0 yrs</span></td>
-        <td><span class="badge b-teal">~33</span></td>
-        <td><span class="badge b-blue">~11%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$58,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇩🇪</span><span class="country-name">Germany</span><div class="country-sub">Western Europe</div></td>
-        <td><div class="model-tag">Social market economy (Soziale Marktwirtschaft)</div></td>
-        <td><span class="badge b-teal">#24 &nbsp; 6.75</span></td>
-        <td><span class="badge b-green">81.0 yrs</span></td>
-        <td><span class="badge b-green">~31</span></td>
-        <td><span class="badge b-blue">~12%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$63,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇺🇾</span><span class="country-name">Uruguay</span><div class="country-sub">South America</div></td>
-        <td><div class="model-tag">Social democratic (Latin America's model)</div></td>
-        <td><span class="badge b-teal">~#34 &nbsp; 6.40</span></td>
-        <td><span class="badge b-teal">78.0 yrs</span></td>
-        <td><span class="badge b-teal">~40</span></td>
-        <td><span class="badge b-blue">~9%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$27,000</td>
-      </tr>
-      <tr>
-        <td><span class="flag">🇵🇹</span><span class="country-name">Portugal</span><div class="country-sub">Southern Europe</div></td>
-        <td><div class="model-tag">Democratic socialist (constitution)</div></td>
-        <td><span class="badge b-teal">~#40 &nbsp; 6.40</span></td>
-        <td><span class="badge b-green">81.5 yrs</span></td>
-        <td><span class="badge b-teal">~33</span></td>
-        <td><span class="badge b-blue">~10%</span></td>
-        <td><span class="badge b-green">Yes</span></td>
-        <td>$38,000</td>
-      </tr>
-      <tr class="us-row">
-        <td><div class="us-label">★ Comparison</div><span class="flag">🇺🇸</span><span class="country-name">United States</span><div class="country-sub">North America</div></td>
-        <td><div class="model-tag">Liberal market economy (limited welfare state)</div></td>
-        <td><span class="badge b-amber">~#23 &nbsp; 6.72</span></td>
-        <td><span class="badge b-red">79.0 yrs</span></td>
-        <td><span class="badge b-red">~41</span></td>
-        <td><span class="badge b-red">~17%</span></td>
-        <td><span class="badge b-red">No</span></td>
-        <td>$82,000</td>
-      </tr>
-    </tbody>
-  </table>
+    <table id="main-table">
+      <thead id="thead"></thead>
+      <tbody id="tbody"></tbody>
+    </table>
   </div>
+
   <div class="footnote">
-    <strong>Notes:</strong> Gini coefficient measures post-tax income inequality (0 = perfect equality, 100 = perfect inequality). "Happiness rank" uses the Cantril Ladder (0–10 self-reported life satisfaction, averaged 2023–2025). All figures are approximations — some vary slightly by source and year. The term "socialist hybrid" is contested; these countries are capitalist market economies with expansive welfare states, not socialist in a strict ideological sense.
+    <strong>Notes:</strong>
+    Gini coefficient measures post-tax income inequality (0 = perfect equality, 100 = perfect inequality). &nbsp;
+    Poverty rate = share of population below 50% of national median income (OECD standard). &nbsp;
+    Maternal mortality per 100,000 live births (WHO/World Bank, 2022–23). &nbsp;
+    PISA 2022: average of math, reading &amp; science scores (OECD average ≈ 484; a 30-point gap ≈ ~1 year of schooling). &nbsp;
+    Tertiary attainment = % of 25–64-year-olds with any post-secondary degree (OECD 2024). &nbsp;
+    HS Graduation = % of adults 25–64 who completed upper secondary education. &nbsp;
+    Tuition/Student Debt column describes the dominant model; per-borrower debt varies widely by program. US figure (~$38K) is average federal debt for bachelor's graduates. &nbsp;
+    All figures are approximations and may vary slightly by source and year. &nbsp;
+    The term "socialist hybrid" is contested — these countries are capitalist market economies with expansive welfare states.
   </div>
   <div class="source-line">
-    Sources: 2026 World Happiness Report (Gallup / University of Oxford) &nbsp;·&nbsp; OECD Health at a Glance 2025 &nbsp;·&nbsp; World Bank Poverty &amp; Inequality Platform (2025) &nbsp;·&nbsp; Peterson-KFF Health System Tracker (2024) &nbsp;·&nbsp; IMF World Economic Outlook (2024)
+    Sources: 2026 World Happiness Report (Gallup / University of Oxford) &nbsp;·&nbsp;
+    OECD Health at a Glance 2025 &nbsp;·&nbsp; OECD Education at a Glance 2025 &nbsp;·&nbsp;
+    OECD Society at a Glance 2024 &nbsp;·&nbsp; OECD Pensions at a Glance 2025 &nbsp;·&nbsp;
+    PISA 2022 Results (OECD, Dec. 2023) &nbsp;·&nbsp;
+    World Bank Poverty &amp; Inequality Platform (2025) &nbsp;·&nbsp;
+    Peterson-KFF Health System Tracker (2024) &nbsp;·&nbsp;
+    WHO Maternal Mortality Estimates (2023) &nbsp;·&nbsp;
+    IMF World Economic Outlook (2024)
   </div>
 </div>
-<div class="attribution">Research &amp; design: Claude (Anthropic) · <a href="https://claude.ai">claude.ai</a></div>
+<div class="attribution">Research &amp; design: Claude (Anthropic) &nbsp;·&nbsp; <a href="https://claude.ai">claude.ai</a></div>
+
+<script>
+const countries = [
+  {
+    name:"Finland", flag:"🇫🇮", region:"Nordic", isUS:false,
+    model:"Social democracy",
+    happiness:{val:7.74, rank:"#1", cls:"b-green"},
+    lifeExp:{val:82.5, disp:"82.5 yrs", cls:"b-green"},
+    gini:{val:27, disp:"~27", cls:"b-green"},
+    healthSpend:{val:9, disp:"~9%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:57000, disp:"$57,000", cls:"b-blue"},
+    poverty:{val:6.5, disp:"~6.5%", cls:"b-green"},
+    maternalMort:{val:3, disp:"3 / 100K", cls:"b-green"},
+    pisa:{val:495, disp:"495", cls:"b-teal"},
+    hsGrad:{val:93, disp:"~93%", cls:"b-green"},
+    tertiary:{val:45, disp:"~45%", cls:"b-teal"},
+    tuition:{val:1, disp:"Free (public)", cls:"b-green"},
+  },
+  {
+    name:"Denmark", flag:"🇩🇰", region:"Nordic", isUS:false,
+    model:"Social democracy",
+    happiness:{val:7.58, rank:"#3", cls:"b-green"},
+    lifeExp:{val:81.5, disp:"81.5 yrs", cls:"b-green"},
+    gini:{val:28, disp:"~28", cls:"b-green"},
+    healthSpend:{val:10, disp:"~10%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:67000, disp:"$67,000", cls:"b-blue"},
+    poverty:{val:6.0, disp:"~6%", cls:"b-green"},
+    maternalMort:{val:4, disp:"4 / 100K", cls:"b-green"},
+    pisa:{val:497, disp:"497", cls:"b-teal"},
+    hsGrad:{val:84, disp:"~84%", cls:"b-teal"},
+    tertiary:{val:43, disp:"~43%", cls:"b-teal"},
+    tuition:{val:1, disp:"Free (public)", cls:"b-green"},
+  },
+  {
+    name:"Iceland", flag:"🇮🇸", region:"Nordic", isUS:false,
+    model:"Social democracy",
+    happiness:{val:7.53, rank:"#2", cls:"b-green"},
+    lifeExp:{val:83.0, disp:"83.0 yrs", cls:"b-green"},
+    gini:{val:26, disp:"~26", cls:"b-green"},
+    healthSpend:{val:9, disp:"~9%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:65000, disp:"$65,000", cls:"b-blue"},
+    poverty:{val:5.0, disp:"~5%", cls:"b-green"},
+    maternalMort:{val:3, disp:"3 / 100K", cls:"b-green"},
+    pisa:{val:463, disp:"463", cls:"b-amber"},
+    hsGrad:{val:83, disp:"~83%", cls:"b-teal"},
+    tertiary:{val:47, disp:"~47%", cls:"b-teal"},
+    tuition:{val:2, disp:"Low fees", cls:"b-teal"},
+  },
+  {
+    name:"Sweden", flag:"🇸🇪", region:"Nordic", isUS:false,
+    model:"Social democracy",
+    happiness:{val:7.34, rank:"#4", cls:"b-green"},
+    lifeExp:{val:83.0, disp:"83.0 yrs", cls:"b-green"},
+    gini:{val:29, disp:"~29", cls:"b-green"},
+    healthSpend:{val:11, disp:"~11%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:62000, disp:"$62,000", cls:"b-blue"},
+    poverty:{val:8.5, disp:"~8.5%", cls:"b-teal"},
+    maternalMort:{val:5, disp:"5 / 100K", cls:"b-green"},
+    pisa:{val:491, disp:"491", cls:"b-teal"},
+    hsGrad:{val:85, disp:"~85%", cls:"b-teal"},
+    tertiary:{val:48, disp:"~48%", cls:"b-teal"},
+    tuition:{val:1, disp:"Free (public)", cls:"b-green"},
+  },
+  {
+    name:"Netherlands", flag:"🇳🇱", region:"Western Europe", isUS:false,
+    model:"Social market economy",
+    happiness:{val:7.32, rank:"#7", cls:"b-green"},
+    lifeExp:{val:82.5, disp:"82.5 yrs", cls:"b-green"},
+    gini:{val:28, disp:"~28", cls:"b-green"},
+    healthSpend:{val:11, disp:"~11%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:65000, disp:"$65,000", cls:"b-blue"},
+    poverty:{val:7.5, disp:"~7.5%", cls:"b-green"},
+    maternalMort:{val:4, disp:"4 / 100K", cls:"b-green"},
+    pisa:{val:493, disp:"493", cls:"b-teal"},
+    hsGrad:{val:86, disp:"~86%", cls:"b-teal"},
+    tertiary:{val:46, disp:"~46%", cls:"b-teal"},
+    tuition:{val:2, disp:"Low fees", cls:"b-teal"},
+  },
+  {
+    name:"Norway", flag:"🇳🇴", region:"Nordic", isUS:false,
+    model:"Social democracy + sovereign wealth",
+    happiness:{val:7.30, rank:"#6", cls:"b-green"},
+    lifeExp:{val:83.5, disp:"83.5 yrs", cls:"b-green"},
+    gini:{val:27, disp:"~27", cls:"b-green"},
+    healthSpend:{val:11, disp:"~11%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:82000, disp:"$82,000", cls:"b-blue"},
+    poverty:{val:8.5, disp:"~8.5%", cls:"b-teal"},
+    maternalMort:{val:2, disp:"2 / 100K", cls:"b-green"},
+    pisa:{val:477, disp:"477", cls:"b-teal"},
+    hsGrad:{val:84, disp:"~84%", cls:"b-teal"},
+    tertiary:{val:48, disp:"~48%", cls:"b-teal"},
+    tuition:{val:1, disp:"Free (public)", cls:"b-green"},
+  },
+  {
+    name:"Canada", flag:"🇨🇦", region:"North America", isUS:false,
+    model:"Liberal welfare state",
+    happiness:{val:6.90, rank:"#18", cls:"b-teal"},
+    lifeExp:{val:82.0, disp:"82.0 yrs", cls:"b-green"},
+    gini:{val:33, disp:"~33", cls:"b-teal"},
+    healthSpend:{val:11, disp:"~11%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:58000, disp:"$58,000", cls:"b-blue"},
+    poverty:{val:11.5, disp:"~11.5%", cls:"b-teal"},
+    maternalMort:{val:8, disp:"8 / 100K", cls:"b-green"},
+    pisa:{val:506, disp:"506", cls:"b-green"},
+    hsGrad:{val:92, disp:"~92%", cls:"b-green"},
+    tertiary:{val:63, disp:"~63%", cls:"b-green"},
+    tuition:{val:3, disp:"Moderate fees", cls:"b-teal"},
+  },
+  {
+    name:"Germany", flag:"🇩🇪", region:"Western Europe", isUS:false,
+    model:"Social market economy (Soziale Marktwirtschaft)",
+    happiness:{val:6.75, rank:"#24", cls:"b-teal"},
+    lifeExp:{val:81.0, disp:"81.0 yrs", cls:"b-green"},
+    gini:{val:31, disp:"~31", cls:"b-green"},
+    healthSpend:{val:12, disp:"~12%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:63000, disp:"$63,000", cls:"b-blue"},
+    poverty:{val:9.5, disp:"~9.5%", cls:"b-green"},
+    maternalMort:{val:4, disp:"4 / 100K", cls:"b-green"},
+    pisa:{val:475, disp:"475", cls:"b-teal"},
+    hsGrad:{val:87, disp:"~87%", cls:"b-teal"},
+    tertiary:{val:35, disp:"~35%", cls:"b-teal"},
+    tuition:{val:1, disp:"Free (public)", cls:"b-green"},
+  },
+  {
+    name:"Uruguay", flag:"🇺🇾", region:"South America", isUS:false,
+    model:"Social democratic (Latin America's model)",
+    happiness:{val:6.40, rank:"~#34", cls:"b-teal"},
+    lifeExp:{val:78.0, disp:"78.0 yrs", cls:"b-teal"},
+    gini:{val:40, disp:"~40", cls:"b-teal"},
+    healthSpend:{val:9, disp:"~9%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:27000, disp:"$27,000", cls:"b-blue"},
+    poverty:{val:11.5, disp:"~11.5%", cls:"b-teal"},
+    maternalMort:{val:19, disp:"19 / 100K", cls:"b-amber"},
+    pisa:{val:435, disp:"435", cls:"b-amber"},
+    hsGrad:{val:60, disp:"~60%", cls:"b-amber"},
+    tertiary:{val:26, disp:"~26%", cls:"b-amber"},
+    tuition:{val:1, disp:"Free (public)", cls:"b-green"},
+  },
+  {
+    name:"Portugal", flag:"🇵🇹", region:"Southern Europe", isUS:false,
+    model:"Democratic socialist (constitution)",
+    happiness:{val:6.40, rank:"~#40", cls:"b-teal"},
+    lifeExp:{val:81.5, disp:"81.5 yrs", cls:"b-green"},
+    gini:{val:33, disp:"~33", cls:"b-teal"},
+    healthSpend:{val:10, disp:"~10%", cls:"b-blue"},
+    uhc:{val:1, disp:"Yes", cls:"b-green"},
+    gdpCap:{val:38000, disp:"$38,000", cls:"b-blue"},
+    poverty:{val:12.0, disp:"~12%", cls:"b-teal"},
+    maternalMort:{val:12, disp:"12 / 100K", cls:"b-teal"},
+    pisa:{val:472, disp:"472", cls:"b-teal"},
+    hsGrad:{val:70, disp:"~70%", cls:"b-amber"},
+    tertiary:{val:38, disp:"~38%", cls:"b-teal"},
+    tuition:{val:2, disp:"Low fees", cls:"b-teal"},
+  },
+  {
+    name:"United States", flag:"🇺🇸", region:"North America", isUS:true,
+    model:"Liberal market economy (limited welfare state)",
+    happiness:{val:6.72, rank:"~#23", cls:"b-amber"},
+    lifeExp:{val:79.0, disp:"79.0 yrs", cls:"b-red"},
+    gini:{val:41, disp:"~41", cls:"b-red"},
+    healthSpend:{val:17, disp:"~17%", cls:"b-red"},
+    uhc:{val:0, disp:"No", cls:"b-red"},
+    gdpCap:{val:82000, disp:"$82,000", cls:"b-blue"},
+    poverty:{val:18.0, disp:"~18%", cls:"b-red"},
+    maternalMort:{val:21, disp:"21 / 100K", cls:"b-red"},
+    pisa:{val:489, disp:"489", cls:"b-teal"},
+    hsGrad:{val:92, disp:"~92%", cls:"b-green"},
+    tertiary:{val:50, disp:"~50%", cls:"b-teal"},
+    tuition:{val:4, disp:"High / ~$38K avg debt", cls:"b-red"},
+  },
+];
+
+const metrics = [
+  {
+    key:"model", label:"Model Type", group:"general", color:"#5a6680",
+    sortVal: c => c.model,
+    render: c => `<div class="model-tag">${c.model}</div>`
+  },
+  {
+    key:"happiness", label:"Happiness Score", group:"social", color:"#4a9e1a",
+    sortVal: c => c.happiness.val,
+    render: c => `<span class="badge ${c.happiness.cls}">${c.happiness.rank} &nbsp;${c.happiness.val}</span>`
+  },
+  {
+    key:"lifeExp", label:"Life Expectancy", group:"health", color:"#1e72c8",
+    sortVal: c => c.lifeExp.val,
+    render: c => `<span class="badge ${c.lifeExp.cls}">${c.lifeExp.disp}</span>`
+  },
+  {
+    key:"gini", label:"Gini Coefficient", group:"economic", color:"#d4900a",
+    sortVal: c => c.gini.val,
+    render: c => `<span class="badge ${c.gini.cls}">${c.gini.disp}</span>`
+  },
+  {
+    key:"poverty", label:"Poverty Rate", group:"economic", color:"#d4900a",
+    sortVal: c => c.poverty.val,
+    render: c => `<span class="badge ${c.poverty.cls}">${c.poverty.disp}</span>`
+  },
+  {
+    key:"maternalMort", label:"Maternal Mortality", group:"health", color:"#1e72c8",
+    sortVal: c => c.maternalMort.val,
+    render: c => `<span class="badge ${c.maternalMort.cls}">${c.maternalMort.disp}</span>`
+  },
+  {
+    key:"healthSpend", label:"Health Spend % GDP", group:"health", color:"#1e72c8",
+    sortVal: c => c.healthSpend.val,
+    render: c => `<span class="badge ${c.healthSpend.cls}">${c.healthSpend.disp}</span>`
+  },
+  {
+    key:"uhc", label:"Universal Health Care", group:"health", color:"#1e72c8",
+    sortVal: c => c.uhc.val,
+    render: c => `<span class="badge ${c.uhc.cls}">${c.uhc.disp}</span>`
+  },
+  {
+    key:"pisa", label:"PISA Score (2022)", group:"education", color:"#6b3fb5",
+    sortVal: c => c.pisa.val,
+    render: c => `<span class="badge ${c.pisa.cls}">${c.pisa.disp}</span>`
+  },
+  {
+    key:"hsGrad", label:"HS Graduation Rate", group:"education", color:"#6b3fb5",
+    sortVal: c => c.hsGrad.val,
+    render: c => `<span class="badge ${c.hsGrad.cls}">${c.hsGrad.disp}</span>`
+  },
+  {
+    key:"tertiary", label:"Tertiary Attainment", group:"education", color:"#6b3fb5",
+    sortVal: c => c.tertiary.val,
+    render: c => `<span class="badge ${c.tertiary.cls}">${c.tertiary.disp}</span>`
+  },
+  {
+    key:"tuition", label:"Tuition / Student Debt", group:"education", color:"#6b3fb5",
+    sortVal: c => c.tuition.val,
+    render: c => `<span class="badge ${c.tuition.cls}">${c.tuition.disp}</span>`
+  },
+  {
+    key:"gdpCap", label:"GDP per Capita (PPP)", group:"economic", color:"#d4900a",
+    sortVal: c => c.gdpCap.val,
+    render: c => `<span class="badge ${c.gdpCap.cls}">${c.gdpCap.disp}</span>`
+  },
+];
+
+// defaults: everything except model type
+const defaultActive = new Set(["happiness","lifeExp","gini","poverty","maternalMort","healthSpend","uhc","pisa","hsGrad","tertiary","tuition","gdpCap"]);
+let activeMetrics = new Set(defaultActive);
+let sortKey = "happiness";
+let sortDir = -1; // -1 = desc
+
+// build chips
+const chipsEl = document.getElementById("chips");
+metrics.forEach(m => {
+  const chip = document.createElement("div");
+  chip.className = "chip" + (activeMetrics.has(m.key) ? " active" : "");
+  chip.dataset.key = m.key;
+  chip.innerHTML = `<span class="dot" style="background:${m.color}"></span>${m.label}`;
+  chip.addEventListener("click", () => {
+    if (activeMetrics.has(m.key)) {
+      if (activeMetrics.size <= 1) return;
+      activeMetrics.delete(m.key);
+      chip.classList.remove("active");
+      if (sortKey === m.key) { sortKey = [...activeMetrics][0]; sortDir = -1; }
+    } else {
+      activeMetrics.add(m.key);
+      chip.classList.add("active");
+    }
+    render();
+  });
+  chipsEl.appendChild(chip);
+});
+
+function handleSort(key) {
+  if (sortKey === key) { sortDir *= -1; }
+  else { sortKey = key; sortDir = -1; }
+  render();
+}
+
+function render() {
+  const cols = metrics.filter(m => activeMetrics.has(m.key));
+
+  // thead
+  const thead = document.getElementById("thead");
+  thead.innerHTML = "";
+  const tr = document.createElement("tr");
+
+  const thC = document.createElement("th");
+  thC.textContent = "Country";
+  thC.dataset.key = "__country__";
+  if (sortKey === "__country__") thC.className = sortDir === 1 ? "sort-asc" : "sort-desc";
+  thC.addEventListener("click", () => handleSort("__country__"));
+  tr.appendChild(thC);
+
+  cols.forEach(m => {
+    const th = document.createElement("th");
+    th.textContent = m.label;
+    th.dataset.key = m.key;
+    if (sortKey === m.key) th.className = sortDir === 1 ? "sort-asc" : "sort-desc";
+    th.addEventListener("click", () => handleSort(m.key));
+    tr.appendChild(th);
+  });
+  thead.appendChild(tr);
+
+  // sort
+  
+  countries.sort((a, b) => {
+    let av, bv;
+    if (sortKey === "__country__") { av = a.name; bv = b.name; }
+    else {
+      const m = metrics.find(x => x.key === sortKey);
+      av = m ? m.sortVal(a) : 0;
+      bv = m ? m.sortVal(b) : 0;
+    }
+    if (av < bv) return -sortDir;
+    if (av > bv) return  sortDir;
+    return 0;
+  });
+  const sorted = countries;
+
+  // tbody
+  const tbody = document.getElementById("tbody");
+  tbody.innerHTML = "";
+  sorted.forEach(c => {
+    const row = document.createElement("tr");
+    if (c.isUS) row.className = "us-row";
+
+    const tdC = document.createElement("td");
+    tdC.innerHTML = `
+      ${c.isUS ? '<div class="us-label">★ Comparison</div>' : ""}
+      <span class="flag">${c.flag}</span><span class="country-name">${c.name}</span>
+      <div class="country-sub">${c.region}</div>`;
+    row.appendChild(tdC);
+
+    cols.forEach(m => {
+      const td = document.createElement("td");
+      td.innerHTML = m.render(c);
+      row.appendChild(td);
+    });
+    tbody.appendChild(row);
+  });
+}
+
+render();
+</script>
 </body>
 </html>
